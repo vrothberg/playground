@@ -10,7 +10,6 @@ jobs:
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"                   # required - allows the action to make calls to GitHub's rest API
         branch-regex: '.*'
-        lowercase-branch: true                                      # optional - whether to lowercase branch name before matching
-        title-template: '[%branch%]'                                # required - text template to update title with
+        title-template: '[branch-name]'                                # required - text template to update title with
         replace-title: true                                        # optional - whether to prefix or replace title with title-template
         title-prefix-space: true                                    # optional - whether to add a space after title prefix

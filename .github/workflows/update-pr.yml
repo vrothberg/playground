@@ -8,8 +8,8 @@ jobs:
     steps:
     - uses: tzkhan/pr-update-action@v1.1.1
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"                   # required - allows the action to make calls to GitHub's rest API
-        branch-regex: '.*'
-        title-template: '[branch-name]'                                # required - text template to update title with
-        replace-title: true                                        # optional - whether to prefix or replace title with title-template
-        title-prefix-space: true                                    # optional - whether to add a space after title prefix
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        branch-regex: '^(?!master).*$'
+        title-template: '[v2.0.5-rhel]'
+        replace-title: true
+        title-prefix-space: true

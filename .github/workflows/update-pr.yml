@@ -1,0 +1,15 @@
+name: "Update Pull Request"
+
+on: pull_request
+
+jobs:
+  update_pr:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: tzkhan/pr-update-action@v1.1.1
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"                   # required - allows the action to make calls to GitHub's rest API
+        lowercase-branch: true                                      # optional - whether to lowercase branch name before matching
+        title-template: '[%branch%]'                                # required - text template to update title with
+        replace-title: true                                        # optional - whether to prefix or replace title with title-template
+        title-prefix-space: true                                    # optional - whether to add a space after title prefix
